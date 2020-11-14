@@ -8,3 +8,7 @@ jobs:
           password: $DOCKERHUB_PASSWORD
     steps:
       - run: node --version
+workflows:
+  app-tests:
+    jobs:
+      - node/test
